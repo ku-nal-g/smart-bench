@@ -1,0 +1,391 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.dashboard-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .welcome-text {
+      color: #6b7280;
+      font-size: 0.875rem;
+
+      .user-role {
+        font-weight: 600;
+        color: #3b82f6;
+      }
+    }
+
+    .logout-btn {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background: #dc2626;
+      }
+    }
+  }
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.error-alert {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+
+  .col-md-4, .col-md-8 {
+    padding: 0;
+  }
+
+  .col-md-4 {
+    flex: 0 0 350px;
+  }
+
+  .col-md-8 {
+    flex: 1;
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  border: none;
+
+  .card-header {
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem;
+    border-radius: 8px 8px 0 0;
+
+    h5 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    p {
+      margin: 0.5rem 0 0 0;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+
+    .header-with-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .stats {
+        .total-loss {
+          background: #fef3c7;
+          color: #d97706;
+          padding: 0.25rem 0.75rem;
+          border-radius: 4px;
+          font-size: 0.875rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-footer {
+    background: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+.project-list {
+  .project-item {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background: #f9fafb;
+    }
+
+    &.active {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .project-info {
+      .project-name {
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 0.25rem;
+      }
+
+      .project-budget {
+        color: #059669;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .project-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+
+        .skill-tag {
+          background: #e5e7eb;
+          color: #374151;
+          padding: 0.125rem 0.5rem;
+          border-radius: 4px;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+.selection-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+
+  .prompt-content {
+    text-align: center;
+    color: #6b7280;
+
+    h3 {
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.no-matches {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+
+  .no-matches-content {
+    text-align: center;
+    color: #6b7280;
+
+    h4 {
+      color: #1f2937;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+.employee-table {
+  .table {
+    margin: 0;
+
+    th {
+      background: #f9fafb;
+      border-bottom: 1px solid #e5e7eb;
+      color: #374151;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
+    }
+
+    td {
+      border-bottom: 1px solid #f3f4f6;
+      padding: 1rem;
+      vertical-align: middle;
+    }
+
+    .employee-row:hover {
+      background: #f9fafb;
+    }
+
+    .employee-info {
+      strong {
+        color: #1f2937;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .all-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+
+        .skill-badge {
+          background: #f3f4f6;
+          color: #6b7280;
+          padding: 0.125rem 0.5rem;
+          border-radius: 4px;
+          font-size: 0.75rem;
+
+          &.matched {
+            background: #dbeafe;
+            color: #1e40af;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .matched-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+
+      .matched-skill {
+        background: #dcfce7;
+        color: #166534;
+        padding: 0.125rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+    }
+
+    .daily-loss {
+      color: #dc2626;
+      font-weight: 600;
+    }
+
+    .status-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      &.bench {
+        background: #fef3c7;
+        color: #d97706;
+      }
+
+      &.assigned {
+        background: #dcfce7;
+        color: #166534;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .dashboard-header .header-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-content {
+    padding: 0 1rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 1rem;
+
+    .col-md-4, .col-md-8 {
+      flex: none;
+    }
+  }
+
+  .employee-table .table {
+    font-size: 0.875rem;
+
+    th, td {
+      padding: 0.5rem;
+    }
+
+    .employee-info .all-skills,
+    .matched-skills {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+// AI Suggestion Badge Styling
+.badge {
+  &.bg-warning {
+    background-color: #fbbf24 !important;
+    color: #1f2937 !important;
+    font-weight: 500;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+
+    &:hover {
+      background-color: #f59e0b !important;
+    }
+  }
+
+  &.bg-success {
+    background-color: #10b981 !important;
+    color: white !important;
+  }
+}
